@@ -68,7 +68,7 @@ class WeatherProxyServer(BaseHTTPRequestHandler):
             self.send_error(500, "OWM_API_KEY environment variable not set")
             return
 
-        print(f"Request: {self.path}")
+        print(f"Request: {self.path}", flush=True)
 
         if parsed_path.path == '/widget/asus1/city-find.asp':
             location = qs.get('location', [''])[0]
@@ -84,7 +84,10 @@ class WeatherProxyServer(BaseHTTPRequestHandler):
                     lat = city.get('lat', 0)
                     lon = city.get('lon', 0)
                     loc_id = f"{lat},{lon}"
-                    xml += f'        <location city="{name}" country="{country}" adminArea="{state}" location="{loc_id}" />\n'
+                    asus_country = name
+                    asus_admin = f"{state}, {country}" if state else country
+                    
+                    xml += f'        <location city="{name}" country="{asus_country}" adminArea="{asus_admin}" location="{loc_id}" />\n'
             xml += '    </citylist>\n</adc_database>'
             
             self.send_response(200)
@@ -153,7 +156,6 @@ class WeatherProxyServer(BaseHTTPRequestHandler):
             xml += "    </currentconditions>\n"
             xml += "    <forecast>\n"
 
-            # Aggregate 5-day forecast
             days = {}
             for item in fc_data['list']:
                 date = item['dt_txt'].split(' ')[0]
@@ -169,7 +171,6 @@ class WeatherProxyServer(BaseHTTPRequestHandler):
                 day_data = days[date]
                 high = int(max(day_data['temps']))
                 low = int(min(day_data['temps']))
-                # Use most common icon for the day
                 day_icon_owm = max(set(day_data['icons']), key=day_data['icons'].count)
                 day_icon = get_owm_icon(day_icon_owm)
                 night_icon = get_owm_icon(day_icon_owm.replace('d', 'n'))
@@ -204,10 +205,10 @@ class WeatherProxyServer(BaseHTTPRequestHandler):
 
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 3007))
-    server_address = ('', port)
+    server_address = ('0.0.0.0', port)
     httpd = HTTPServer(server_address, WeatherProxyServer)
-    print(f"Starting OpenWeatherMap proxy server on port {port}...")
-    print(f"OWM_API_KEY is {'SET' if OWM_API_KEY else 'MISSING'}")
+    print(f"Starting OpenWeatherMap proxy server on port {port}...", flush=True)
+    print(f"OWM_API_KEY is {'SET' if OWM_API_KEY else 'MISSING'}", flush=True)
     try:
         httpd.serve_forever()
     except KeyboardInterrupt:
