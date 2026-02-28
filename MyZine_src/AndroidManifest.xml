@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.asus.mygazine.revived">
+    <uses-permission android:name="android.permission.READ_CALENDAR"/>
+    <uses-permission android:name="com.android.browser.permission.READ_HISTORY_BOOKMARKS"/>
+    <uses-permission android:name="com.android.browser.permission.WRITE_HISTORY_BOOKMARKS"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="com.android.email.permission.ACCESS_PROVIDER"/>
+    <application android:hardwareAccelerated="true" android:icon="@drawable/icon" android:label="@string/app_name" android:process="com.asus.myzine">
+        <receiver android:icon="@drawable/icon" android:label="@string/app_name" android:name="com.asus.mygazine.MyZineWidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+                <action android:name="com.asus.appwidget.action.RESIZE"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/myzine_widget_provider"/>
+        </receiver>
+        <service android:enabled="true" android:name="com.asus.mygazine.MyZineRemoteViewsService" android:permission="android.permission.BIND_REMOTEVIEWS"/>
+        <service android:enabled="true" android:name="com.asus.mygazine.MyZineService"/>
+        <activity android:label="@string/app_settings" android:launchMode="singleTask" android:name="com.asus.mygazine.MyZineSettings">
+            <intent-filter>
+                <action android:name="com.asus.mygazine.launchSetting"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/app_name" android:launchMode="singleTask" android:name="com.asus.mygazine.PhotoActivity" android:theme="@style/DialogPickerTheme"/>
+    </application>
+</manifest>

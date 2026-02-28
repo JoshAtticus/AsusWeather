@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/slideshow_header_title"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:title="@string/select_the_folder" android:key="select" android:summary="@string/photo_path_value" />
+    <ListPreference android:title="@string/slide_show_interval_title" android:key="slide_show_interval" android:entryValues="@array/slide_show_interval_value" />
+</PreferenceScreen>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/photo_canvas" android:background="#cc000000" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/mygazine" android:scaleType="centerCrop"
+      xmlns:android="http://schemas.android.com/apk/res/android" />
+    <TextView android:textSize="16.0dip" android:textColor="@android:color/white" android:gravity="left" android:id="@id/photo_date" android:background="@drawable/asus_ep_bgpattern_withoutattern" android:paddingLeft="10.0dip" android:paddingTop="2.0dip" android:paddingRight="10.0dip" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="76.0dip" android:layout_marginTop="391.0dip" android:text="@string/photo_date_str" android:layout_alignLeft="@id/AnimLayout" android:layout_alignBottom="@id/AnimLayout" />
+</FrameLayout>
