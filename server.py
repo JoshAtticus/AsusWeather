@@ -84,6 +84,15 @@ class WeatherProxyServer(BaseHTTPRequestHandler):
                     lat = city.get('lat', 0)
                     lon = city.get('lon', 0)
                     loc_id = f"{lat},{lon}"
+                    
+                    # OpenWeatherMap geocoding often returns matching cities that map to 
+                    # different local weather stations (like South Perth vs Maylands). 
+                    # Pre-fetch the weather data to get the exact localized station name.
+                    weather_url = f"http://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={OWM_API_KEY}"
+                    w_data = fetch_json(weather_url)
+                    if w_data and 'name' in w_data and w_data['name']:
+                        name = w_data['name']
+
                     asus_country = name
                     asus_admin = f"{state}, {country}" if state else country
                     
