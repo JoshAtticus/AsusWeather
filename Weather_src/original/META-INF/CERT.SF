@@ -1,0 +1,354 @@
+Signature-Version: 1.0
+Created-By: 1.0 (Android SignApk)
+SHA1-Digest-Manifest: QFejNQdp6NMJnckYQg3j3jH3v7o=
+
+Name: res/drawable-land-mdpi/asus_ep_weather_partlysunnywiththundersho
+ wers.png
+SHA1-Digest: XwhC2WZIiZ2EQ5yLzupyyC7uqy4=
+
+Name: res/drawable-mdpi/asus_ep_weather_fog_s.png
+SHA1-Digest: KsgF4zTf0Um+UO4I7Uid6Xm8liU=
+
+Name: res/drawable-mdpi/accu_weather_logo.png
+SHA1-Digest: AYSsny8gxBod52i3ymZq6AnQSRQ=
+
+Name: res/drawable-mdpi/weather.png
+SHA1-Digest: zHSKhEj4E4BaFJPuNxB3T0Mz8YA=
+
+Name: res/drawable-mdpi/asus_ep_weather_thunderstorm_s.png
+SHA1-Digest: oAVgIASjW4rV5e96Tq3Bs+Eb+QY=
+
+Name: res/layout/button.xml
+SHA1-Digest: WGRo97mZDRJ4sv3WHY4l3lOawk0=
+
+Name: res/drawable-mdpi/asus_ep_weather_partlysunnywithshowers_s.png
+SHA1-Digest: HO5J7j1IkmEbFHcNhovkM8D0YV8=
+
+Name: res/drawable-land-mdpi/asus_ep_weather_partlysunnywithflurries.p
+ ng
+SHA1-Digest: GBHe5MV0W74F1YIRJwDlRzENIP8=
+
+Name: res/drawable-mdpi/asus_ep_weather_sleet_s.png
+SHA1-Digest: HQOnmRCvNuj2v3ncaMrxp15BNAo=
+
+Name: res/xml/fragmented_preferences.xml
+SHA1-Digest: S+hkTI7l7EiH9QjcCkgmaPJGg3Y=
+
+Name: res/drawable-port-mdpi/asus_ep_weather_44_bg.png
+SHA1-Digest: Q0VxqoXsazoGoRF3BzMiUQEbWUo=
+
+Name: res/drawable-port-mdpi/asus_ep_weather_freezingrain.png
+SHA1-Digest: GjQHb58mQMqfkPlT/qO59BfuBwA=
+
+Name: res/layout/radiobutton.xml
+SHA1-Digest: 5QW221OwsctHdXzRrq9HifDNqD8=
+
+Name: res/layout-port/widgetlayout_1x1.xml
+SHA1-Digest: MLp7MbXXtII3EuLXpf/A+59NylE=
+
+Name: res/drawable-land-mdpi/asus_ep_weather_ice.png
+SHA1-Digest: kfBi0TwFTrnZlfoAz7CSEu2Bvlg=
+
+Name: res/drawable-land-mdpi/asus_ep_weather_mostlycloudy.png
+SHA1-Digest: 0yMmJNdKvSacAl2FEYPmJ+YSfOc=
+
+Name: res/drawable-land-mdpi/asus_ep_weather_hazysunshine.png
+SHA1-Digest: Hg3Rj7PdcXCTUrJC3GAiJWSKDis=
+
+Name: res/xml/weather_provider.xml
+SHA1-Digest: 7q0jWsz+wCpFHijMEioNPg/AeZQ=
+
+Name: res/drawable-land-mdpi/asus_ep_weather_thunderstorm.png
+SHA1-Digest: yxhFkCSRoBwu/JkBjVBq9xonFhA=
+
+Name: res/drawable-port-mdpi/asus_ep_weather_mostlycloudywithshowers.p
+ ng
+SHA1-Digest: Y5r8HmZ9RQBmmEDfqhPYK1kbQp8=
+
+Name: res/drawable-mdpi/asus_ep_weather_rainandsnowmixed_s.png
+SHA1-Digest: AzeGU8yDL434+oUT1DW2S4qMCL0=
+
+Name: res/drawable-land-mdpi/asus_ep_weather_partlysunny.png
+SHA1-Digest: ihsJiLoTA+EwBMDgJlSE0KBXpo0=
+
+Name: res/drawable-land-mdpi/asus_ep_weather_rain.png
+SHA1-Digest: x4rJUVcaga4hm5/9HT3T8vXGArk=
+
+Name: res/drawable-land-mdpi/asus_ep_weather_partlysunnywithshowers.pn
+ g
+SHA1-Digest: vMgqXJSesqOu2rD7Wd9em68N0mE=
+
+Name: res/drawable-port-mdpi/asus_ep_weather_11_bg.png
+SHA1-Digest: auYNln1ekNiYhyd+1atNOPyKhUE=
+
+Name: res/drawable-port-mdpi/asus_ep_weather_shower.png
+SHA1-Digest: 8vU/a2GWmJ1AoHwiurN21hVN4OY=
+
+Name: res/drawable-land-mdpi/asus_ep_weather_mostlysunny.png
+SHA1-Digest: HqXOzDp7hfBGvEfr+B90ktdOuSg=
+
+Name: res/drawable-port-mdpi/asus_ep_weather_mostlycloudywithflurries.
+ png
+SHA1-Digest: lK5C6GFFqzsUGqKjyW/nNz7l6nI=
+
+Name: res/layout/listview.xml
+SHA1-Digest: gREGmf/rbE3A6VJ4IjUEVaaTIuQ=
+
+Name: res/drawable-land-mdpi/asus_ep_weather_11_bg.png
+SHA1-Digest: 78n4kjhkAljKoid0XImmwkWs/vQ=
+
+Name: resources.arsc
+SHA1-Digest: 8Kon+/jHRGy05I1Vcundlt2M7BY=
+
+Name: res/drawable-port-mdpi/asus_ep_weather_sleet.png
+SHA1-Digest: 91Fm8Xm+TOuASkj11HXjU9Nop+8=
+
+Name: res/drawable-port-mdpi/asus_ep_weather_rainandsnowmixed.png
+SHA1-Digest: hZhOSPVj0myIOJMA9n5IWXQOGjg=
+
+Name: res/drawable/asus_ep_search_text_p.9.png
+SHA1-Digest: 26cltb8JR0C1jKhEbq/fa1htnnE=
+
+Name: AndroidManifest.xml
+SHA1-Digest: NoA4r2jLcLstVRB7xv50sn099I4=
+
+Name: res/drawable-port-mdpi/asus_ep_weather_cloudy.png
+SHA1-Digest: fbkaJjzTiSn63YOd44qtCvIlg9E=
+
+Name: res/drawable-port-mdpi/asus_ep_weather_ice.png
+SHA1-Digest: NP5CRWBcsJ1kM23dO/MgfLTLYmE=
+
+Name: res/layout-port/widgetlayout_4x4.xml
+SHA1-Digest: 8IMrJ9/vHSHwnBuzaf+TnaULLHc=
+
+Name: res/drawable-land-mdpi/asus_ep_weather_rainandsnowmixed.png
+SHA1-Digest: GZVkUy5Y9zZxI3eY6hgkVWeWKoI=
+
+Name: res/drawable-land-mdpi/asus_ep_noweather.png
+SHA1-Digest: wUvVa3/EDirelfsmaQLBGNixSNw=
+
+Name: res/drawable-land-mdpi/asus_ep_weather_freezingrain.png
+SHA1-Digest: AZiZ8ot+ig7bLP7EMYjxUy/w/2A=
+
+Name: res/drawable-port-mdpi/asus_ep_weather_thunderstorm.png
+SHA1-Digest: DjWmPNDMtB1pZpBp+WOmyNdV0nw=
+
+Name: res/drawable-port-mdpi/asus_ep_weather_flurries.png
+SHA1-Digest: mw07Z+8l/nepgVS0ep1cPQ7My0E=
+
+Name: res/drawable-land-mdpi/asus_ep_weather_fog.png
+SHA1-Digest: m1oDoumcmq/OQoCLPlQuQlAPrzQ=
+
+Name: res/drawable-mdpi/asus_ep_weather_freezingrain_s.png
+SHA1-Digest: 2+G+pZ2QWOCuvhVwlp4VDtofqWU=
+
+Name: res/drawable/asus_ep_search_text_d.9.png
+SHA1-Digest: kFgi9e6D2WdOtRY7EgZlf6FlqGw=
+
+Name: res/drawable-land-mdpi/asus_ep_weather_sunny.png
+SHA1-Digest: PhAHWSqJCGGzqQvlbaAErTD8Dw4=
+
+Name: res/layout-land/listview_edit.xml
+SHA1-Digest: F9Fq2M6CpQ4PD0REtFupOblcYvQ=
+
+Name: res/drawable-port-mdpi/asus_ep_weather_sunny.png
+SHA1-Digest: yLlbjYI9spAXSnoijPeRmgCMnII=
+
+Name: res/drawable-port-mdpi/asus_ep_weather_mostlysunny.png
+SHA1-Digest: 1/iLpP4t29Yt/i0wSJy5wPU0A8o=
+
+Name: res/drawable-mdpi/asus_ep_weather_intermittentclouds_s.png
+SHA1-Digest: mNyvhCgmhI/sDubDRTZ2wf28gPA=
+
+Name: res/layout-port/listview_edit.xml
+SHA1-Digest: UDts3WWTpXaIaoFp9r3Za4Qbzx8=
+
+Name: res/drawable-mdpi/asus_ep_weather_partlysunnywiththundershowers_
+ s.png
+SHA1-Digest: cfHrh0Ts/nHLVukG+ABNGaCCTsI=
+
+Name: res/drawable-mdpi/asus_ep_weather_snow_s.png
+SHA1-Digest: +RYL0vgsNUjRI9b1LUsY/v8fXnU=
+
+Name: res/layout-land/settinglayout.xml
+SHA1-Digest: Qk5qtAWGT/kiR31Y7bVVeYCcZ34=
+
+Name: res/drawable-land-mdpi/asus_ep_weather_sleet.png
+SHA1-Digest: 6rp+6Huq1SLSaOfgl7RW1fIa48U=
+
+Name: res/drawable-port-mdpi/asus_ep_weather_partlysunny.png
+SHA1-Digest: lGqXPhlPI+hG4VrKKeFU9RkIfm8=
+
+Name: res/drawable-mdpi/asus_ep_weather_rain_s.png
+SHA1-Digest: tM9eQC71eY5/7tzK8vPW1c42jkI=
+
+Name: res/drawable-mdpi/asus_ep_weather_cloudy_s.png
+SHA1-Digest: HRlbtycohrxoJb21LOuIBU1txPI=
+
+Name: res/drawable/asus_ep_search_text_f.9.png
+SHA1-Digest: PA7HzUOE9bc/skm0UIRFuBdWiaY=
+
+Name: res/drawable-mdpi/asus_ep_weather_dreary_s.png
+SHA1-Digest: r6pzhsAQ83Ct2+hqe3BXNyNOVpw=
+
+Name: res/drawable-land-mdpi/asus_ep_weather_intermittentclouds.png
+SHA1-Digest: ZZQbAYOYlgOOdrXhdpjYZ95ScRw=
+
+Name: res/drawable/asus_ep_search_text_l.9.png
+SHA1-Digest: PiCBGEsmrV8ennsahmcyRh053cU=
+
+Name: res/drawable-port-mdpi/asus_ep_weather_partlysunnywithshowers.pn
+ g
+SHA1-Digest: RrZW+y0N3EzJCeoRIlf0b/+djEc=
+
+Name: res/drawable-land-mdpi/asus_ep_weather_44_bg.png
+SHA1-Digest: vZzm/3CaiH7whgWuKIiP0r0wi9c=
+
+Name: res/drawable-mdpi/asus_ep_weather_ice_s.png
+SHA1-Digest: rd1vhgbq4+NHyaHQ4nQwRnWBpc8=
+
+Name: res/drawable-port-mdpi/asus_ep_weather_intermittentclouds.png
+SHA1-Digest: KN8UmC29odYeA3Z38Cm/CTZZREs=
+
+Name: res/drawable/asus_ep_search_text_n.9.png
+SHA1-Digest: OK5eh03Zykb+S7oa5zMECu1nhlc=
+
+Name: res/drawable-land-mdpi/asus_ep_weather_mostlycloudywithshowers.p
+ ng
+SHA1-Digest: u1vdB8sUdbdKWT9/FAOC1US+6r0=
+
+Name: res/drawable-land-mdpi/asus_ep_weather_cloudy.png
+SHA1-Digest: w9R0uGJjkMB03INx3ISuXxI8Y2Y=
+
+Name: res/drawable/greyedit.xml
+SHA1-Digest: UHd4gfECDtYJ3sS0D9KvAsKwkeo=
+
+Name: res/xml/fragmented_preferences_china.xml
+SHA1-Digest: IjunXi1hAUkd2PqBGRfkXxe51GM=
+
+Name: res/drawable-port-mdpi/asus_ep_weather_mostlycloudywithsnow.png
+SHA1-Digest: I4GQldAk5Zmm52vQYefRU5ZreEU=
+
+Name: res/drawable-port-mdpi/asus_ep_weather_fog.png
+SHA1-Digest: +VwUgWPTmH8tvCcp2rWjICNElAs=
+
+Name: res/drawable-port-mdpi/asus_ep_weather_partlysunnywiththundersho
+ wers.png
+SHA1-Digest: vPmcLtT8dSDBaJ5De3TqNRVUNWc=
+
+Name: res/drawable-port-mdpi/asus_ep_weather_rain.png
+SHA1-Digest: F4v1nwhFKdpTTnDuev/GjQVOcFE=
+
+Name: res/drawable-mdpi/asus_ep_weather_windy_s.png
+SHA1-Digest: c+Gfq3+oAlH8O6vT24gOO+yVg8o=
+
+Name: res/drawable-land-mdpi/asus_ep_weather_mostlycloudywithflurries.
+ png
+SHA1-Digest: 60yKzQJiDow0XYgoT9M9KP5oq5A=
+
+Name: res/drawable-mdpi/asus_ep_weather_sunny_s.png
+SHA1-Digest: y/z5Utcaz6PI2fNGArK8nQW1luQ=
+
+Name: res/drawable-mdpi/asus_ep_weather_mostlysunny_s.png
+SHA1-Digest: 631LjLU4+uvQQEt+nVJBVvQdtJI=
+
+Name: res/drawable-mdpi/asus_ep_weather_mostlycloudywiththundershowers
+ _s.png
+SHA1-Digest: 2ChPPhIxFLHU0/5egE+bhUzoJLU=
+
+Name: res/drawable-mdpi/asus_ep_weather_partlysunny_s.png
+SHA1-Digest: c83pFBwhQquDoCjAsgar022eU7g=
+
+Name: res/drawable-mdpi/asus_ep_noweather_s.png
+SHA1-Digest: Dqt1ct32T6iPVrGFLxuhboEx0lE=
+
+Name: res/drawable-mdpi/asus_ep_weather_mostlycloudywithflurries_s.png
+SHA1-Digest: extWkR4gdroOpAI2obFgJ9nLpXw=
+
+Name: res/drawable-mdpi/asus_ep_weather_shower_s.png
+SHA1-Digest: 3fAdzNzJK2WHXmunUyFQVn5lcu0=
+
+Name: res/drawable-land-mdpi/asus_ep_weather_flurries.png
+SHA1-Digest: VX685jd6f2pYajgUhIHMeIMsEaQ=
+
+Name: res/drawable-land-mdpi/asus_ep_weather_mostlycloudywithsnow.png
+SHA1-Digest: itgE/wNLu18kpg51TVHKGGsoaLc=
+
+Name: res/drawable-land-mdpi/asus_ep_weather_shower.png
+SHA1-Digest: sYFiaPnIi42f3C6djTvfPHYGBhQ=
+
+Name: res/layout-port/settinglayout.xml
+SHA1-Digest: +yNb67JzXBK6vPM71QT/BEVVmjU=
+
+Name: res/drawable-port-mdpi/asus_ep_weather_partlysunnywithflurries.p
+ ng
+SHA1-Digest: h7kAgN9cmRhdBOT0uN5QKubzwXI=
+
+Name: res/drawable-mdpi/asus_ep_widget_thumbnail_weather.png
+SHA1-Digest: jWOxcI5Sh5NI3fxghkgFdk9Bgtc=
+
+Name: res/drawable-port-mdpi/asus_ep_weather_dreary.png
+SHA1-Digest: 8DMrBJajzvFcGD/6UvM2r3o6wBg=
+
+Name: res/drawable-mdpi/asus_ep_weather_hazysunshine_s.png
+SHA1-Digest: S/5x8ubI5u90vsdSKLr1x2PxXwM=
+
+Name: res/drawable-port-mdpi/asus_ep_weather_snow.png
+SHA1-Digest: 2z9k+bTkjFLiMKLHx/KanvM6LBM=
+
+Name: res/drawable-port-mdpi/asus_ep_noweather.png
+SHA1-Digest: CR8dni6AEDknRG2mtQM+ldLPe0I=
+
+Name: res/drawable-land-mdpi/asus_ep_weather_mostlycloudywiththundersh
+ owers.png
+SHA1-Digest: LifPj14QLLYgkOnFx3431xTZe6A=
+
+Name: res/drawable-port-mdpi/asus_ep_weather_mostlycloudy.png
+SHA1-Digest: IYN8e54BV9xRiQt40LBWn3+vBEs=
+
+Name: res/layout-port/widgetlayout_4x3.xml
+SHA1-Digest: LVrJqKiV99ytXKeSE9t7nMhNtac=
+
+Name: res/drawable-port-mdpi/asus_ep_weather_mostlycloudywiththundersh
+ owers.png
+SHA1-Digest: jwc2d7p3P9ZQsvzc+EIqvWBNv3g=
+
+Name: res/drawable-mdpi/asus_ep_weather_mostlycloudywithsnow_s.png
+SHA1-Digest: JNlGuDVBR/M8MAFOpYlBIkZYdXc=
+
+Name: res/drawable-land-mdpi/asus_ep_weather_windy.png
+SHA1-Digest: 46NhgluDBH+UWrdgiNMWF1qu+2U=
+
+Name: res/drawable-mdpi/asus_ep_weather_mostlycloudywithshowers_s.png
+SHA1-Digest: N/hsoXT6eGOe2of202jq/K049CE=
+
+Name: res/layout-land/widgetlayout_1x1.xml
+SHA1-Digest: z/hPahCbc4/cABP9Wd+CW7yusNY=
+
+Name: res/drawable-mdpi/asus_ep_weather_flurries_s.png
+SHA1-Digest: HvHdrYIai3v6Z7BFZ4nLRULqea0=
+
+Name: res/layout-land/widgetlayout_4x4.xml
+SHA1-Digest: ABdcuVrbPNWMp1sM6aE7vYvnnSI=
+
+Name: res/drawable-mdpi/asus_ep_weather_mostlycloudy_s.png
+SHA1-Digest: aOFYi0qpKkV/c8IYhN4pLDdWEDU=
+
+Name: res/drawable-port-mdpi/asus_ep_weather_hazysunshine.png
+SHA1-Digest: sJlg6HrwVf6lWr1JyKkQLpt728Y=
+
+Name: res/drawable-mdpi/asus_ep_weather_partlysunnywithflurries_s.png
+SHA1-Digest: zcpUR2AtHJhDZDS5rN2iMpck5Xw=
+
+Name: res/drawable-port-mdpi/asus_ep_weather_windy.png
+SHA1-Digest: dg+0FSmjUlP89XJE5UhsSNVnSb8=
+
+Name: res/layout-land/widgetlayout_4x3.xml
+SHA1-Digest: VN0UWosmzh7PrAAOPZ3tnpzwiiU=
+
+Name: res/drawable-land-mdpi/asus_ep_weather_snow.png
+SHA1-Digest: nKGYhzC5k9z1Yeho8lCXLTo9vk0=
+
+Name: res/drawable-land-mdpi/asus_ep_weather_dreary.png
+SHA1-Digest: LVV1AdopbqfoqLgt4JayoqTiJ90=
+

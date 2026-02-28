@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="button" />
+    <item type="id" name="SearchCity" />
+    <item type="id" name="cityFindListView" />
+    <item type="id" name="textView1" />
+    <item type="id" name="EditText" />
+    <item type="id" name="radiobutton" />
+    <item type="id" name="TitleText" />
+    <item type="id" name="accuIcon" />
+    <item type="id" name="relativeLayout2" />
+    <item type="id" name="saveBtn" />
+    <item type="id" name="widget_noinfoimage" />
+    <item type="id" name="widget_noinfo" />
+    <item type="id" name="widget_layout" />
+    <item type="id" name="iconbg" />
+    <item type="id" name="widget_icon" />
+    <item type="id" name="widget_day" />
+    <item type="id" name="widget_temp" />
+    <item type="id" name="widget_temp_long" />
+    <item type="id" name="widget_bgimage" />
+    <item type="id" name="widget_location" />
+    <item type="id" name="widget_location_long" />
+    <item type="id" name="widget_state" />
+    <item type="id" name="widget_state_long" />
+    <item type="id" name="widget_description" />
+    <item type="id" name="widget_lastupdate" />
+    <item type="id" name="widget_degree" />
+    <item type="id" name="widget_unit" />
+    <item type="id" name="icon_1" />
+    <item type="id" name="widget_day1" />
+    <item type="id" name="widget_temp1" />
+    <item type="id" name="widget_temp1_long" />
+    <item type="id" name="icon_2" />
+    <item type="id" name="widget_day2" />
+    <item type="id" name="widget_temp2" />
+    <item type="id" name="widget_temp2_long" />
+    <item type="id" name="icon_3" />
+    <item type="id" name="widget_day3" />
+    <item type="id" name="widget_temp3" />
+    <item type="id" name="widget_temp3_long" />
+    <item type="id" name="icon_4" />
+    <item type="id" name="widget_day4" />
+    <item type="id" name="widget_temp4" />
+    <item type="id" name="widget_temp4_long" />
+</resources>

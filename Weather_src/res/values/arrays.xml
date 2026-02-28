@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="avai_widths">
+        <item>72.0dip</item>
+        <item>294.0dip</item>
+        <item>294.0dip</item>
+    </array>
+    <array name="avai_heights">
+        <item>72.0dip</item>
+        <item>220.0dip</item>
+        <item>294.0dip</item>
+    </array>
+    <string-array name="freq_menu">
+        <item>1 hr</item>
+        <item>2 hrs</item>
+        <item>4 hrs</item>
+        <item>8 hrs</item>
+        <item>12 hrs</item>
+        <item>Manual</item>
+    </string-array>
+    <string-array name="freqcontent_listfrag">
+        <item>1</item>
+        <item>2</item>
+        <item>4</item>
+        <item>8</item>
+        <item>12</item>
+        <item>1000</item>
+    </string-array>
+    <string-array name="unitcontent_listfrag">
+        <item>C</item>
+        <item>F</item>
+    </string-array>
+    <string-array name="unit_menu">
+        <item>℃</item>
+        <item>℉</item>
+    </string-array>
+</resources>

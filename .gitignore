@@ -1,0 +1,19 @@
+# Build artifacts
+*.apk
+*.odex
+*.idsig
+*.keystore
+
+# Tools
+*.jar
+framework/
+logcat.txt
+test_api.py
+
+# Python
+__pycache__/
+*.pyc
+.env
+
+# Custom Build Script
+build.sh

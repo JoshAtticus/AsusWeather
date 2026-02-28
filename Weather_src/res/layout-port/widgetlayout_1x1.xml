@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/widget_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/widget_noinfoimage" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+    <TextView android:textSize="20.0dip" android:textColor="#ffffffff" android:id="@id/widget_noinfo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:shadowColor="#ff000000" android:shadowDx="1.0" android:shadowDy="1.0" android:shadowRadius="3.0" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="90.0dip">
+        <ImageView android:id="@id/iconbg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" />
+        <ImageView android:id="@id/widget_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+        <TextView android:textSize="14.0dip" android:textColor="#ffffffff" android:id="@id/widget_day" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="48.0dip" android:singleLine="true" android:shadowColor="#ff000000" android:shadowDx="1.0" android:shadowDy="1.0" android:shadowRadius="3.0" android:layout_centerHorizontal="true" />
+        <TextView android:textSize="22.0dip" android:textStyle="bold" android:textColor="#ffffffff" android:id="@id/widget_temp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:shadowColor="#ff000000" android:shadowDx="1.0" android:shadowDy="1.0" android:shadowRadius="3.0" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+        <TextView android:textSize="16.0dip" android:textStyle="bold" android:textColor="#ffffffff" android:id="@id/widget_temp_long" android:layout_width="wrap_content" android:layout_height="wrap_content" android:shadowColor="#ff000000" android:shadowDx="1.0" android:shadowDy="1.0" android:shadowRadius="3.0" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+</RelativeLayout>
