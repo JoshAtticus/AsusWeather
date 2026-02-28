@@ -3,7 +3,7 @@ This repository contains the decompiled and patched source code for the classic 
 
 The original AccuWeather API endpoints (`asus1.accu-weather.com`) that the widget relied on have been shut down for years. This project breathes new life into the widget by intercepting those requests and translating them.
 
-Officially compatible with Android 3.0-4.0.3. Only tested on the TF101, may work on other devices with similar Android versions.
+Officially compatible with Android 3.0-4.0.3. Only tested on the TF101, may work on other devices with similar Android versions. Asus Weather Revived does not require root and can be installed as a user app either with adb install or by opening it on the device itself.
 
 ## Data Source & Privacy
 My server fetches weather data from OpenWeatherMap using the free tier API. This means that while your location data is not sent to Asus or AccuWeather, it is sent to OpenWeatherMap.
