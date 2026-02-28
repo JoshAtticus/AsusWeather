@@ -36,8 +36,13 @@ except ImportError:
 
 OWM_API_KEY = os.environ.get("OWM_API_KEY", "")
 
+DB_DIR = "/app/asusweather/data"
+DB_PATH = os.path.join(DB_DIR, 'cache.db')
+
 def init_db():
-    conn = sqlite3.connect('cache.db')
+    if not os.path.exists(DB_DIR):
+        os.makedirs(DB_DIR)
+    conn = sqlite3.connect(DB_PATH)
     c = conn.cursor()
     c.execute('''CREATE TABLE IF NOT EXISTS search_cache
                  (location TEXT PRIMARY KEY, xml TEXT, timestamp REAL)''')
@@ -72,7 +77,7 @@ def check_rate_limit(ip, req_type, max_min, max_day):
     return True
 
 def get_cached_search(location):
-    with sqlite3.connect('cache.db') as conn:
+    with sqlite3.connect(DB_PATH) as conn:
         c = conn.cursor()
         c.execute('SELECT xml, timestamp FROM search_cache WHERE location=?', (location,))
         row = c.fetchone()
@@ -84,14 +89,14 @@ def get_cached_search(location):
     return None
 
 def set_cached_search(location, xml):
-    with sqlite3.connect('cache.db') as conn:
+    with sqlite3.connect(DB_PATH) as conn:
         c = conn.cursor()
         c.execute('INSERT OR REPLACE INTO search_cache (location, xml, timestamp) VALUES (?, ?, ?)',
                   (location, xml, time.time()))
         conn.commit()
 
 def get_cached_weather(lat, lon, allow_expired=False):
-    with sqlite3.connect('cache.db') as conn:
+    with sqlite3.connect(DB_PATH) as conn:
         c = conn.cursor()
         c.execute('SELECT xml, timestamp FROM weather_cache WHERE lat=? AND lon=?', (lat, lon))
         row = c.fetchone()
@@ -103,7 +108,7 @@ def get_cached_weather(lat, lon, allow_expired=False):
     return None
 
 def set_cached_weather(lat, lon, xml):
-    with sqlite3.connect('cache.db') as conn:
+    with sqlite3.connect(DB_PATH) as conn:
         c = conn.cursor()
         c.execute('INSERT OR REPLACE INTO weather_cache (lat, lon, xml, timestamp) VALUES (?, ?, ?, ?)',
                   (lat, lon, xml, time.time()))
