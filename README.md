@@ -21,3 +21,10 @@ Please note that due to permission issues, the MyZine widget cannot fetch emails
 
 ## Self-hosting
 Not currently possible as my server endpoint is hardcoded in the app. Modifying the app to point to your own server and recompiling is possible, but not user-friendly.
+
+## Screenshots
+<img width="800" height="500" alt="image" src="https://github.com/user-attachments/assets/9c71d370-9c8a-42d5-8b60-11a075a1472a" />
+<img width="800" height="500" alt="image" src="https://github.com/user-attachments/assets/1e2a1bbd-de1c-48c6-8d17-982d78881db1" />
+<img width="800" height="500" alt="image" src="https://github.com/user-attachments/assets/97b0787f-34d1-40f8-972a-4a443aeec6c3" />
+
+
