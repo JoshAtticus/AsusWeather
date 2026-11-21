@@ -27,6 +27,8 @@ from collections import defaultdict
 import urllib.request
 from urllib.parse import urlparse, parse_qs
 from http.server import HTTPServer, BaseHTTPRequestHandler
+from xml.sax.saxutils import escape, quoteattr
+import xml.etree.ElementTree as ET
 
 try:
     from dotenv import load_dotenv
@@ -76,6 +78,13 @@ def check_rate_limit(ip, req_type, max_min, max_day):
     rate_limits[ip][req_type].append(now)
     return True
 
+def is_well_formed_xml(xml):
+    try:
+        ET.fromstring(xml.encode('utf-8'))
+        return True
+    except ET.ParseError:
+        return False
+
 def get_cached_search(location):
     with sqlite3.connect(DB_PATH) as conn:
         c = conn.cursor()
@@ -84,7 +93,7 @@ def get_cached_search(location):
         if row:
             xml, timestamp = row
             # 12 months in seconds: 365 * 24 * 3600 = 31536000
-            if time.time() - timestamp < 31536000:
+            if time.time() - timestamp < 31536000 and is_well_formed_xml(xml):
                 return xml
     return None
 
@@ -103,7 +112,7 @@ def get_cached_weather(lat, lon, allow_expired=False):
         if row:
             xml, timestamp = row
             # 30 minutes in seconds: 30 * 60 = 1800
-            if allow_expired or time.time() - timestamp < 1800:
+            if (allow_expired or time.time() - timestamp < 1800) and is_well_formed_xml(xml):
                 return xml
     return None
 
@@ -130,8 +139,6 @@ def get_owm_icon(icon_code):
 
 def fetch_json(url):
     ctx = ssl.create_default_context()
-    ctx.check_hostname = False
-    ctx.verify_mode = ssl.CERT_NONE
     req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
     try:
         with urllib.request.urlopen(req, context=ctx, timeout=10) as response:
@@ -175,7 +182,7 @@ class WeatherProxyServer(BaseHTTPRequestHandler):
                 if not check_rate_limit(client_ip, "search_api", 5, 50):
                     xml = get_ratelimited_search_xml()
                 else:
-                    url = f"http://api.openweathermap.org/geo/1.0/direct?q={urllib.parse.quote(location)}&limit=5&appid={OWM_API_KEY}"
+                    url = f"https://api.openweathermap.org/geo/1.0/direct?q={urllib.parse.quote(location)}&limit=5&appid={OWM_API_KEY}"
                     geo_data = fetch_json(url)
                     
                     xml = '<?xml version="1.0" encoding="utf-8"?>\n<adc_database xmlns="http://www.accuweather.com">\n    <citylist>\n'
@@ -184,14 +191,17 @@ class WeatherProxyServer(BaseHTTPRequestHandler):
                             name = city.get('name', 'Unknown')
                             country = city.get('country', '')
                             state = city.get('state', '')
-                            lat = city.get('lat', 0)
-                            lon = city.get('lon', 0)
+                            try:
+                                lat = float(city.get('lat', 0))
+                                lon = float(city.get('lon', 0))
+                            except (TypeError, ValueError):
+                                continue
                             loc_id = f"{lat},{lon}"
                             
                             # OpenWeatherMap geocoding often returns matching cities that map to 
                             # different local weather stations (like South Perth vs Maylands). 
                             # Pre-fetch the weather data to get the exact localized station name.
-                            weather_url = f"http://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={OWM_API_KEY}"
+                            weather_url = f"https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={OWM_API_KEY}"
                             w_data = fetch_json(weather_url)
                             if w_data and 'name' in w_data and w_data['name']:
                                 name = w_data['name']
@@ -199,7 +209,8 @@ class WeatherProxyServer(BaseHTTPRequestHandler):
                             asus_country = name
                             asus_admin = f"{state}, {country}" if state else country
                             
-                            xml += f'        <location city="{name}" country="{asus_country}" adminArea="{asus_admin}" location="{loc_id}" />\n'
+                            xml += (f'        <location city={quoteattr(str(name))} country={quoteattr(str(asus_country))} '
+                                    f'adminArea={quoteattr(str(asus_admin))} location={quoteattr(loc_id)} />\n')
                     xml += '    </citylist>\n</adc_database>'
                     set_cached_search(location, xml)
             
@@ -217,7 +228,10 @@ class WeatherProxyServer(BaseHTTPRequestHandler):
             if loc_id and ',' in loc_id:
                 lat, lon = loc_id.split(',', 1)
             
-            if not lat or not lon:
+            try:
+                lat = str(float(lat))
+                lon = str(float(lon))
+            except ValueError:
                 self.send_error(400, "Missing coordinates")
                 return
 
@@ -259,8 +273,8 @@ class WeatherProxyServer(BaseHTTPRequestHandler):
                     else:
                         xml = get_placeholder_weather_xml()
                 else:
-                    current_url = f"http://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&units=metric&appid={OWM_API_KEY}"
-                    forecast_url = f"http://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&units=metric&appid={OWM_API_KEY}"
+                    current_url = f"https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&units=metric&appid={OWM_API_KEY}"
+                    forecast_url = f"https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&units=metric&appid={OWM_API_KEY}"
                     
                     cur_data = fetch_json(current_url)
                     fc_data = fetch_json(forecast_url)
@@ -291,13 +305,13 @@ class WeatherProxyServer(BaseHTTPRequestHandler):
                     xml += "        <speed>km/h</speed>\n"
                     xml += "    </units>\n"
                     xml += "    <local>\n"
-                    xml += f"        <city>{city_name}</city>\n"
+                    xml += f"        <city>{escape(str(city_name))}</city>\n"
                     xml += f"        <time>{local_time}</time>\n"
-                    xml += f"        <country>{country}</country>\n"
+                    xml += f"        <country>{escape(str(country))}</country>\n"
                     xml += "    </local>\n"
                     xml += "    <currentconditions>\n"
                     xml += f"        <temperature>{temp}</temperature>\n"
-                    xml += f"        <weathertext>{weathertext}</weathertext>\n"
+                    xml += f"        <weathertext>{escape(str(weathertext))}</weathertext>\n"
                     xml += f"        <weathericon>{icon}</weathericon>\n"
                     xml += f"        <realfeel>{realfeel}</realfeel>\n"
                     xml += f"        <windspeed>{windspeed}</windspeed>\n"
